@@ -65,7 +65,11 @@ public class Kurs {
 	}
 
 	public void setProdajni(double prodajni) {
-		this.prodajni = prodajni;
+		if (prodajni > 0) {
+			this.prodajni = prodajni;
+		} else {
+			throw new RuntimeException("Prodajni kurs mora biti pozitivan.");
+		}
 	}
 
 	public double getKupovni() {
@@ -73,7 +77,11 @@ public class Kurs {
 	}
 
 	public void setKupovni(double kupovni) {
-		this.kupovni = kupovni;
+		if (kupovni > 0) {
+			this.kupovni = kupovni;
+		} else {
+			throw new RuntimeException("Kupovni kurs mora biti pozitivan.");
+		}
 	}
 
 	public double getSrednji() {
@@ -81,7 +89,11 @@ public class Kurs {
 	}
 
 	public void setSrednji(double srednji) {
-		this.srednji = srednji;
+		if (srednji > 0) {
+			this.srednji = srednji;
+		} else {
+			throw new RuntimeException("Srednji kurs mora biti pozitivan.");
+		}
 	}
 
 	public GregorianCalendar getDatum() {
@@ -89,7 +101,11 @@ public class Kurs {
 	}
 
 	public void setDatum(GregorianCalendar datum) {
-		this.datum = datum;
+		if (datum != null) {
+			this.datum = datum;
+		} else {
+			throw new RuntimeException("Datum ne sme biti NULL.");
+		}
 	}
 
 }

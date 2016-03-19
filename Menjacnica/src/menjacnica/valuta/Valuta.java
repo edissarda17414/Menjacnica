@@ -55,7 +55,11 @@ public class Valuta {
 	}
 
 	public void setNaziv(String naziv) {
-		this.naziv = naziv;
+		if (naziv != null) {
+			this.naziv = naziv;
+		} else {
+			throw new RuntimeException("Naziv valute ne sme biti NULL.");
+		}
 	}
 
 	public String getSkraceniNaziv() {
@@ -63,7 +67,15 @@ public class Valuta {
 	}
 
 	public void setSkraceniNaziv(String skraceniNaziv) {
-		this.skraceniNaziv = skraceniNaziv;
+		if (skraceniNaziv != null) {
+			if (skraceniNaziv.length() == 3) {
+				this.skraceniNaziv = skraceniNaziv;
+			} else {
+				throw new RuntimeException("Skraceni naziv valute mora imati tacno 3 karaktera.");
+			}
+		} else {
+			throw new RuntimeException("Skraceni naziv valute ne sme biti NULL.");
+		}
 	}
 
 	public LinkedList<Kurs> getKursevi() {
@@ -71,7 +83,11 @@ public class Valuta {
 	}
 
 	public void setKursevi(LinkedList<Kurs> kursevi) {
-		this.kursevi = kursevi;
+		if (kursevi != null) {
+			this.kursevi = kursevi;
+		} else {
+			throw new RuntimeException("Greska pri dodavanju liste kurseva.");
+		}
 	}
 
 }
