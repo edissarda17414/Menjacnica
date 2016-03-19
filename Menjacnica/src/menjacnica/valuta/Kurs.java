@@ -7,7 +7,7 @@ public class Kurs {
 	private double prodajni;
 	private double kupovni;
 	private double srednji;
-	private GregorianCalendar datum;
+	private GregorianCalendar datum = new GregorianCalendar();
 
 	
 	
