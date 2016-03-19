@@ -6,7 +6,7 @@ public class Valuta {
 
 	private String naziv;
 	private String skraceniNaziv;
-	private LinkedList<Kurs> kursevi;
+	private LinkedList<Kurs> kursevi = new LinkedList<>();
 
 	
 	
